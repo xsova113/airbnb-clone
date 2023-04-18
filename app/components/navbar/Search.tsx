@@ -19,8 +19,7 @@ const Search = () => {
 
     const locationLabel = useMemo(() => {
         if (locationValue) {
-            const location = getByValue(locationValue)?.label as string;
-            return location;
+            return getByValue(locationValue as string)?.label;
         }
 
         return "Anywhere";
